@@ -1,0 +1,30 @@
+{
+	"name": "laracasts/transcriptions",
+	"authors": [
+		{
+			"name": "Abdulkareem Fallaha",
+			"email": "abdulkareem.fallaha.mnv@gmail.com"
+		}
+	],
+	"require": {
+		"php": "^8.0.2",
+		"phpunit/phpunit": "^9.5",
+		"vlucas/phpdotenv": "^5.4",
+		"twig/twig": "^3.3",
+      	"ext-pdo": "*"
+    },
+	"autoload": {
+		"files": [
+			"src/core/helper.php"
+		],
+		"psr-4": {
+			"MNV\\Core\\": "src/core/",
+			"MNV\\App\\": "app/"
+		}
+	},
+	"autoload-dev": {
+		"psr-4": {
+			"Tests\\": "tests/"
+		}
+	}
+}

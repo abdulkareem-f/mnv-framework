@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+
+    {% include 'parts/_meta.twig' %}
+
+    <title>{% block title %}{% endblock %} || MNV</title>
+
+    {% include 'parts/_styles.twig' %}
+</head>
+<body class="d-flex flex-column min-vh-100">
+
+    {% include 'parts/_header.twig' %}
+
+    <div class="container mt-5">
+        {% block content %}{% endblock %}
+    </div>
+
+    {% include 'parts/_footer.twig' %}
+
+    {% include 'parts/_scripts.twig' %}
+</body>
+</html>

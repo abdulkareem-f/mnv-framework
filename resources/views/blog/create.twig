@@ -1,0 +1,23 @@
+{% extends 'layouts/master.twig' %}
+
+{% block title %} Create Article {% endblock %}
+
+{% block content %}
+
+    <form method="post" action="{{ baseUrl }}articles">
+        <div class="mb-3">
+            <label for="title" class="form-label">Title</label>
+            <input type="text" class="form-control" id="title" name="title" required autofocus>
+        </div>
+        <div class="mb-3">
+            <label for="body" class="form-label">Body</label>
+            <textarea id="body" name="body" class="form-control" required minlength="50" maxlength="4000" rows="8"></textarea>
+        </div>
+        <div class="mb-3">
+            <label for="author" class="form-label">Author</label>
+            <input type="text" class="form-control" id="author" name="author" required autofocus>
+        </div>
+        <button type="submit" class="btn btn-primary">Create</button>
+    </form>
+
+{% endblock %}

@@ -1,0 +1,36 @@
+{% extends 'layouts/master.twig' %}
+
+{% block title %} Blog {% endblock %}
+
+{% block content %}
+
+    <div class="row">
+
+        {% if by_date %}
+            <h3 class="mb-5">Articles by date: {{ by_date }}</h3>
+        {% endif %}
+
+        {% if articles %}
+            {% for article in articles %}
+                <div class="col-md-4 my-2">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ article.title }}</h5>
+                            <p class="card-text">
+                                {% set shortBody = article.body|slice(0, 200)|join(' ') ~ '<span class="summary-ellipsis">&hellip;</span>' %}
+                                {{ shortBody|raw }}
+                            </p>
+                            <a href="{{ baseUrl }}articles/{{ article.id }}" class="btn btn-primary">Read more</a>
+                            <a href="{{ baseUrl }}articles/{{ article.id }}/edit" class="btn btn-success">Update</a>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        {% else %}
+            <div class="alert alert-info" role="alert">
+                No articles found
+            </div>
+        {% endif %}
+    </div>
+
+{% endblock %}
