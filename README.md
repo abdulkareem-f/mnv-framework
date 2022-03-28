@@ -20,13 +20,13 @@
    DB_USERNAME=root
    DB_PASSWORD=
    ```
-###Running
+### Running
 
 1. Run your server with `php 8.0.2`
 2. Import the `mnv.sql` database file to your empty database (note that because I didn't create migrations)
 3. open the project in your browser to the directory `public`
 
-###Routing
+### Routing
 
 I have prepared small example for articles, and you can find the links in the header and articles, but also you see all the routes here:
 
@@ -55,6 +55,6 @@ vendor/bin/phpunit tests
 ```
 
 
-##Note
+## Note
 
 I have used the `src/core/Database.php` class from external source
